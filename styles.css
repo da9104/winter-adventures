@@ -1,11 +1,7 @@
-*, *:before, *:after {
-    box-sizing: inherit;
+*, html, body {
+    margin: 0px;
+    padding: 0px;
   }
-
-body {
-    box-sizing: border-box; 
-    /* borders & paddings are not applied to overall size of element (width & height) */
-}
 
 #header {
     position: relative;
@@ -46,23 +42,26 @@ body {
       z-index: 2;
     }
 
-footer {
-    padding: 2vh;
-    color:#fff;
-    text-align: center;
-}
+   main > .container {
+        padding: 60px 15px 0;
+      }
 
-div.row {
-    margin: 0 auto;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-}
+      .footer {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+
+      }
+ 
+      
 
 
 @media (pointer: coarse) and (hover: none) {
 
     #header {
-        background: url("https://source.unsplash.com/XT5OInaElMw/1600x900") black no-repeat center center scroll;
+        background: url("./images/mobile-home-page.jpg") black no-repeat center center scroll;
+    
+        // https://source.unsplash.com/XT5OInaElMw/1600x900
     }
 
     #header video {
