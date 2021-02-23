@@ -1,28 +1,50 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    box-sizing: border-box; 
+    /* borders & paddings are not applied to overall size of element (width & height) */
+}
+
+#header {
+    position: relative;
+    background-color: black;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+    z-index: 1;
+  }
 
 #winter-video {
     position: absolute;
+    box-sizing: border-box;
     margin-top: 0;
-    top: 0;
-    width: 100vh;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
     min-width: 100%;
-    max-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+    transform: translateX(-50%) translateY(-50%);
 }
 
-.contents {
-  position: relative;
-  margin: 0 auto;
-  top: 0;
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  color: #f1f1f1;
-  width: fit-content;
-  height: fit-content;
-  min-width: max-content;
-  min-height: max-content;
-  padding: 20rem;
-}
-
+  #header .container { 
+      position: relative;
+      z-index: 2;
+    }
 
 footer {
     padding: 2vh;
@@ -37,11 +59,14 @@ div.row {
 }
 
 
-// media
+@media (pointer: coarse) and (hover: none) {
 
-@media (min-width: 576px) {
-
-    .contents { 
-        padding: 1em;
+    #header {
+        background: url("https://source.unsplash.com/XT5OInaElMw/1600x900") black no-repeat center center scroll;
     }
+
+    #header video {
+        display: none;
+    }
+
 }
