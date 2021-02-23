@@ -3,48 +3,48 @@
     padding: 0px;
   }
 
-#header {
-    position: relative;
-    background-color: black;
-    height: 100vh;
-    min-height: 25rem;
-    width: 100%;
-    overflow: hidden;
-  }
+    #header {
+        position: relative;
+        background-color: black;
+        height: 100vh;
+        min-height: 25rem;
+        width: 100%;
+        overflow: hidden;
+    }
 
-  #header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: .5;
-    z-index: 1;
-  }
+    #header .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: .5;
+        z-index: 1;
+    }
 
-#winter-video {
-    position: absolute;
-    box-sizing: border-box;
-    margin-top: 0;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    height: auto;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: 0;
-    transform: translateX(-50%) translateY(-50%);
-}
+    #winter-video {
+        position: absolute;
+        box-sizing: border-box;
+        margin-top: 0;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: 0;
+        transform: translateX(-50%) translateY(-50%);
+    }
 
 
-.active {
-    color: #fff;
-    text-decoration: none;
-  }
+    .active {
+        color: #fff;
+        text-decoration: none;
+    }
 
-  
-  #header .container { 
+
+   #header .container { 
       position: relative;
       z-index: 2;
     }
@@ -57,21 +57,25 @@
         left: 0;
         bottom: 0;
         width: 100%;
-
       }
  
- 
+      #main-carousels {
+          max-height: 100%;
+      }
+    
+    //  main > #information {
+    //     margin-top: 100px;
+    // }
+
 
 @media (pointer: coarse) and (hover: none) {
 
     #header {
-        background: url("./images/mobile-home-page.jpg") black no-repeat center center scroll;
-    
+        background: url("./images/mobile-home-page.jpg") black no-repeat center center scroll;   
         // https://source.unsplash.com/XT5OInaElMw/1600x900
     }
 
     #header video {
         display: none;
     }
-
 }
