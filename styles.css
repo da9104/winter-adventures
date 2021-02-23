@@ -37,6 +37,13 @@
     transform: translateX(-50%) translateY(-50%);
 }
 
+
+.active {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  
   #header .container { 
       position: relative;
       z-index: 2;
@@ -53,8 +60,7 @@
 
       }
  
-      
-
+ 
 
 @media (pointer: coarse) and (hover: none) {
 
