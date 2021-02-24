@@ -71,17 +71,12 @@
       #main-carousels {
           max-height: 100%;
       }
-    
-    //  main > #information {
-    //     margin-top: 100px;
-    // }
 
 
 @media (pointer: coarse) and (hover: none) {
 
     #header {
         background: url("./images/mobile-home-page.jpg") black no-repeat center center scroll;   
-        // https://source.unsplash.com/XT5OInaElMw/1600x900
     }
 
     #header video {
