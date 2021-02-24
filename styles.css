@@ -1,7 +1,16 @@
-*, html, body {
+*, html {
     margin: 0px;
     padding: 0px;
   }
+
+  body {
+    position: relative;
+  }
+
+ .nav-link {
+     color: white;
+ }
+
 
     #header {
         position: relative;
