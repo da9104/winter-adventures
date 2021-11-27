@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-
     <style>
         body{
             position: relative; /* required */
            
         }
-
         .nav-link {
-            color: gray !important;
+            color: white !important;
         }
 
        .nav-link:hover {
-                color: white !important;
+                opacity: .5 !important;
          }
 
      </style>
@@ -61,6 +58,9 @@
                     </li>
                     <li class="nav-item"> 
                         <a class="nav-link" href="#contact">Contact</a> 
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="#contact" id="signUp" style="color: white;">Sign up</a> 
                     </li>
                 </ul>
              </div>
@@ -226,6 +226,7 @@
                 <div class="row">
                     <div class="col text-center justify-content-center">
                    <p>Winter Adventures 2019</p>
+                   <p id="date"></p>
                  </div>
                </div>
            </div>
@@ -236,9 +237,43 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/9c05ce6683.js" crossorigin="anonymous"></script>
 
-    <script>
+    <script type="text/javascript">
+   
+   function startTime()
+{
+    var today=new Date();
+    //                   1    2    3    4    5    6    7    8    9   10    11  12   13   14   15   16   17   18   19   20   21   22   23   24   25   26   27   28   29   30   31   32   33
+    var suffixes = ['','st','nd','rd','th','th','th','th','th','th','th','th','th','th','th','th','th','th','th','th','th','st','nd','rd','th','th','th','th','th','th','th','st','nd','rd'];
 
-    </script>
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
+    var month = new Array(12);
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+
+    document.getElementById('date').innerHTML=(weekday[today.getDay()] + ',' + " " + today.getDate()+'<sup>'+suffixes[today.getDate()]+'</sup>' + ' of' + " " + month[today.getMonth()] + " " + today.getFullYear() + ' Time Now ' + today.toLocaleTimeString());
+    t=setTimeout(function(){startTime()},500);
+}
+
+startTime()
+  </script>
 
 
 </body>

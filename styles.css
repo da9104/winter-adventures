@@ -7,9 +7,11 @@
     position: relative;
   }
 
- .nav-link {
-     color: white;
- }
+    #signUp {
+        border-radius: 15px;
+        border: 2px solid red;
+        background-color: red;
+    }
 
 
     #header {
@@ -82,8 +84,5 @@
     #header video {
         display: none;
     }
-
-
- 
 
 }
