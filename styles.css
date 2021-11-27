@@ -76,7 +76,7 @@
       }
 
 
-  section.emailing {
+  section#subscribe {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,19 +88,19 @@
    ;
 }
 
-    section.emailing div {
+    section#subscribe div {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 10px;
 }
 
-    section.emailing input {
+    section#subscribe input {
     padding: 10px;
     border-radius: 5px;
     }
 
-    section.emailing button {
+    section#subscribe button {
     padding: 10px;
     border-radius: 5px;
 }
