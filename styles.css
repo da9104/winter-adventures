@@ -75,6 +75,37 @@
       }
 
 
+.emailing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   /*  margin: 0 auto; */
+    gap: 10px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    text-align: center;
+   ;
+}
+
+.emailing div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.emailing input {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.emailing button {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
 @media (pointer: coarse) and (hover: none) {
 
     #header {
