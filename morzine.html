@@ -238,6 +238,7 @@ startTime();
 
 let hearMap = function() {
     var platform = new H.service.Platform({
+       'app_id': 'oKJJj3P36UniFb5qcS5y',
        'apikey': 'j-XNC0bWRiB5ugeQhQugbSgaCm2i3WI_1itXWpmMR4o'
       });   
         // Get an object containing the default map layers:
@@ -247,7 +248,6 @@ let hearMap = function() {
       var map = new H.Map(document.getElementById('map'),
                  defaultLayers.vector.normal.map,
                   {
-
                     // 47.33005540703697, 2.0282207569078317
                     center: { lng: 2.0282207569078317, lat: 47.33005540703697 },
                     zoom: 10
