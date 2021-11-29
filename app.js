@@ -1,4 +1,4 @@
-//93a595068d580bce81f39c157bc2b16b
+//
 function startTime()
 {
     var today=new Date();
@@ -38,17 +38,16 @@ let hearMap = function() {
         var platform = new H.service.Platform({
             apikey: window.apikey
           });   
-            // Get an object containing the default map layers:
           var defaultLayers = platform.createDefaultLayers();
           // Instantiate the map using the vecor map with the
           // default style as the base layer:
           var map = new H.Map(document.getElementById('map'),
                      defaultLayers.vector.normal.map,
                       {
-    
                         // 47.33005540703697, 2.0282207569078317
                         center: { lng: 2.0282207569078317, lat: 47.33005540703697 },
-                        zoom: 10
+                        zoom: 10,
+                        pixelRatio: window.devicePixelRatio || 1
                       });
                       var ui = H.ui.UI.createDefault(map, defaultLayers);
                       var bubble = new H.ui.InfoBubble({ lng: 2.0282207569078317, lat: 47.33005540703697 }, {
@@ -56,5 +55,5 @@ let hearMap = function() {
                        });
                       ui.addBubble(bubble);
       }
-     hearMap();
+ hearMap();
     

@@ -6,6 +6,7 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <title>Winter Adventures</title>
     <script type="text/javascript" src='./test-credentials.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
     type="text/javascript" charset="utf-8"></script>
     <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
@@ -160,6 +161,14 @@
 </section>
 
 
+
+<section >
+  <div id="weather">
+  </div>
+</section>
+
+
+
 <section>
   <div id="map" style="width:100%; height: 500px;"> </div>
 </section>
@@ -194,6 +203,57 @@
     </main>
 
     <script src="./app.js"></script>
+
+    <script>
+
+
+const getWeather = async () => {
+  
+
+  //45.43257296326477, 6.5951603260288065
+
+  try{
+    const config = {headers: {Accept: 'application/json'}}
+    // http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=
+    const res = await axios.get("http://api.openweathermap.org/data/2.5/weather?lat=45&lon=6&appid=93a595068d580bce81f39c157bc2b16b", config)
+    console.log(res.data)
+   return (
+        `<div id="weatherInfo">
+            <div>
+           Today weather is:  ${res.data.weather[0].description}
+                <hr></hr>
+            </div>
+            <div className="Weath">
+                <div className="welement">
+                Temperature: ${res.data.main.temp}
+                </div>
+                <div className="welement">
+                Location:  ${res.data.name}
+                </div>
+                <div className="welement">
+                Humidity:  ${res.data.main.humidity}
+                </div>
+                <div className="welement">
+                Pressure: ${res.data.main.pressure}
+                </div>
+            </div>
+        </div>`
+   )}catch (e) {
+            return "NO WEATHER AVAILABLE! SORRY!"
+    }
+ }
+
+const getForcast = async () => {
+        const weatherText = await getWeather();
+        setTimeout(() => {
+        document.querySelector('#weather').innerHTML = weatherText 
+        },3)
+ }
+
+ getForcast();
+
+    </script>
+
 
 </body>
 </html>
