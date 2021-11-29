@@ -11,6 +11,18 @@ server.use((req, res, next) => {
     next();
 });        
 
+server.use(
+    cors({
+         credentials: true,
+         origin:[
+             'http://localhost:4000',
+             'localhost:4000',
+             'https://winter-adventures.herokuapp.com/',
+             'https://git.heroku.com/winter-adventures.git'
+         ]
+        })
+        );
+
 const corsOptions = {
     origin: [
         '*',
