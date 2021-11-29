@@ -35,9 +35,9 @@ function startTime()
 startTime();
 
 let hearMap = function() {
-        var platform = new H.service.Platform({
-            apikey: window.apikey
-          });   
+        var platform = new H.service.Platform({
+            apikey: window.apikey
+          });   
           var defaultLayers = platform.createDefaultLayers();
           // Instantiate the map using the vecor map with the
           // default style as the base layer:
