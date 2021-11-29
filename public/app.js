@@ -36,7 +36,8 @@ startTime();
 
 let hearMap = function() {
         var platform = new H.service.Platform({
-            apikey: window.apikey
+             apikey: 'j-XNC0bWRiB5ugeQhQugbSgaCm2i3WI_1itXWpmMR4o'
+              //apikey: window.apikey
           });   
           var defaultLayers = platform.createDefaultLayers();
           // Instantiate the map using the vecor map with the
