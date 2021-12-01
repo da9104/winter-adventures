@@ -15,26 +15,28 @@ server.use(
     cors({
          credentials: true,
          origin:[
-             '*',
              'http://localhost:4000',
              'localhost:4000',
-             'https://winter-adventures.herokuapp.com/',
+             'https://winter-adventures.herokuapp.com',
              'https://git.heroku.com/winter-adventures.git'
          ]
         }));
 
 const corsOptions = {
     origin: [
-        '*',
         'localhost:4000',
         'http://localhost:4000',
-        'https://winter-adventures.herokuapp.com/'
+        'https://winter-adventures.herokuapp.com',
+        'https://git.heroku.com/winter-adventures.git',
+        'https://winter-adventures.herokuapp.com/morzine.html',
+        'https://winter-adventures.herokuapp.com/tignes.html',
+        'https://winter-adventures.herokuapp.com/latania.html'
     ],
     credentials: true,
 }
 
 server.use(cors(corsOptions));
-server.use(express.static(__dirname + '/keys'));
+server.use(express.static(__dirname + '/'));
 server.get('/', (req, res) => {
     res.sendFile(path.resolve('index.html'));
 });
