@@ -18,6 +18,7 @@ server.use(
              'http://localhost:4000',
              'localhost:4000',
              'https://winter-adventures.herokuapp.com',
+             'https://winter-adventures.herokuapp.com/',
              'https://git.heroku.com/winter-adventures.git'
          ]
         }));
@@ -26,11 +27,9 @@ const corsOptions = {
     origin: [
         'localhost:4000',
         'http://localhost:4000',
+        'https://winter-adventures.herokuapp.com/',
         'https://winter-adventures.herokuapp.com',
         'https://git.heroku.com/winter-adventures.git',
-        'https://winter-adventures.herokuapp.com/morzine.html',
-        'https://winter-adventures.herokuapp.com/tignes.html',
-        'https://winter-adventures.herokuapp.com/latania.html'
     ],
     credentials: true,
 }
@@ -43,6 +42,3 @@ server.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => console.log(`listening on ${PORT}`));
-
-
-
