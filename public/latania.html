@@ -160,15 +160,29 @@
     </div>
 </section>
 
+ <section id="cal">
+   <div>
+  <form method="post" action="#">
+    <input type="hidden" name="mode" value="PinRequest" />
+   
+  <label><b>Choose price</b></label>
 
-<section id="cal">
-  <h1>Loan Calculator</h1>
-  <input type="radio" name="" id="">
-  <p>Loan Amount: $<input id="amount" type="number" min="1" max="5000000" onchange="computeLoan()"></p>
-  <p>Interest Rate: %<input id="interest_rate" min="0" max="100" value="10" step=".1" onchange="computeLoan()"></p>
-  <p>Months to Pay: <input id="months" type="number" min="1" max="300" value="1" step="1" onchange="computeLoan()"></p>
-  <h2 id="payment"></h2>
-</section>
+     <select name="tot_pin_requested" onchange="calculateAmount(this.value)" id="radio" required>
+ <option value="" disabled selected>Choose your option</option>
+ <option value="1000" name="Economy">Economy</option>
+ <option value="2000" name="Intermediate">Intermediate</option>
+ <option value="3000" name="Performance">Performance</option>
+</select>
+ 
+
+   <span id="person"></span><br/>
+ 
+  <p>Per person <input id="person" type="number" min="1" max="100" value="1" step="1" onchange="calculateAmount(this.value)"></p>
+ 
+   <label><b>Total Amount after</b></label>
+     <input class="w3-input w3-border" name="tot_amount" id="tot_amount" type="text" readonly> <br/>
+    </div>
+    </section>
 
 
 <section >

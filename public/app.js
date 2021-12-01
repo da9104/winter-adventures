@@ -57,4 +57,30 @@ let hearMap = function() {
                       ui.addBubble(bubble);
       }
  hearMap();
+
+
+ var divobj = document.getElementById('tot_amount');		  
+		  
+         function calculateAmount(val) {
+         var value = document.getElementById('radio').value;
+                var price = val * 1;
+                //display the result
+                var tot_price = price + (price * 0.18);
+                divobj.value = `${tot_price}`;
+		   
+	if (value == 1000 ) {
+		  var person = document.getElementById('person');
+		  person.innerHTML = '£90 per week Per person';
+		}
+			  
+	if (value == 2000 ) {
+		  var person = document.getElementById('person');
+		  person.innerHTML = '£120 per week Per person';
+		}
+    if (value == 3000 ) {
+		  var person = document.getElementById('person');
+		  person.innerHTML = '£145 per week Per person';
+		}
+
+}
     
