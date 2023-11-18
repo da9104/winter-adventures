@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-let server = express(); // better instead
+const server = express();
 
 server.use(express.static(__dirname + '/public'));
 server.use((req, res, next) => {
@@ -15,21 +15,17 @@ server.use(
     cors({
          credentials: true,
          origin:[
+             '*',
              'http://localhost:4000',
              'localhost:4000',
-             'https://winter-adventures.herokuapp.com',
-             'https://winter-adventures.herokuapp.com/',
-             'https://git.heroku.com/winter-adventures.git'
          ]
         }));
 
 const corsOptions = {
     origin: [
+        '*',
         'localhost:4000',
         'http://localhost:4000',
-        'https://winter-adventures.herokuapp.com/',
-        'https://winter-adventures.herokuapp.com',
-        'https://git.heroku.com/winter-adventures.git',
     ],
     credentials: true,
 }
